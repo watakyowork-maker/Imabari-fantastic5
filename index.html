@@ -1,209 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>今治観光アプリ</title>
-    <style>
-        /* 基本スタイル */
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', 'Arial', 'Hiragino Sans', 'Meiryo', sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        /* 1. メインビジュアル */
-        .hero {
-            height: 60vh; /* 画面の高さの60% */
-            background-image: url('DSC_0007.jpg'); /* ここに写真のパスを指定 */
-            background-size: cover;
-            background-position: center;
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 0 20px;
-            position: relative;
-        }
-        /* 写真の上に少し暗いフィルターをかけて文字を読みやすくする */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-        .hero-content {
-            position: relative; /* フィルターの上にコンテンツを配置 */
-            z-index: 1;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        /* 2. カテゴリーメニュー */
-        .categories {
-            padding: 30px 10px;
-            background-color: white;
-            text-align: center;
-        }
-        .categories h2 {
-            margin-top: 0;
-        }
-        .category-menu {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap; /* スマホで折り返すように */
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .category-item {
-            margin: 10px;
-        }
-        .category-item a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .category-icon {
-            font-size: 3rem;
-            margin-bottom: 8px;
-        }
-
-        /* 3. おすすめ情報 */
-        .recommendations {
-            padding: 30px 20px;
-        }
-        .recommendations h2 {
-            text-align: center;
-        }
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 15px;
-        }
-        .card-content h3 {
-            margin-top: 0;
-        }
-    </style>
-    /* --- ここから追加 --- */
-/* メディアクエリ */
-@media (max-width: 600px) {
-    /* 画面幅が600px以下（スマホなど）の場合に適用されるスタイル */
-
-    .hero h1 {
-        font-size: 1.8rem; /* メインのキャッチコピーを少し小さくする */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今治市観光アプリ - チーム練習</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
     }
 
-    .categories,
-    .recommendations {
-        padding: 20px 15px; /* 余白を少し狭くする */
+    header {
+      background: #0077c2;
+      color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
     }
 
-    .category-icon {
-        font-size: 2.5rem; /* カテゴリアイコンを少し小さくする */
+    h1 {
+      margin: 0;
+      font-size: 1.4rem;
     }
-}
-/* --- ここまで追加 --- */
+
+    .members {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .members h2 {
+      margin-top: 0;
+      color: #0077c2;
+    }
+
+    .members p {
+      font-size: 1.1rem;
+      margin: 0.4rem 0;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>今治市観光アプリ - チーム練習ページ</h1>
+    <p>みんなで名前を追加してみよう！</p>
+  </header>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>何もしないをしに、今治へ。</h1>
-        </div>
-    </header>
+  <div class="members">
+    <h2>担当メンバー</h2>
 
-    <main>
-        <section class="categories">
-            <h2>目的から探す</h2>
-            <ul class="category-menu">
-                <li class="category-item">
-                    <a href="#">
-                        <span class="category-icon">🚲</span>
-                        <span>サイクリング</span>
-                    </a>
-                </li>
-                <li class="category-item">
-                    <a href="#">
-                        <span class="category-icon">🏯</span>
-                        <span>観る</span>
-                    </a>
-                </li>
-                <li class="category-item">
-                    <a href="#">
-                        <span class="category-icon">😋</span>
-                        <span>食べる</span>
-                    </a>
-                </li>
-                 <li class="category-item">
-                    <a href="#">
-                        <span class="category-icon">🛍️</span>
-                        <span>おみやげ</span>
-                    </a>
-                </li>
-                <li class="category-item">
-                    <a href="#">
-                        <span class="category-icon">🏝️</span>
-                        <span>島めぐり</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
+    <!-- 👇 各メンバーがここに <p>担当：kiyominn</p> を追加していきます -->
+    <p>担当：watakyon</p>
+    <p>担当：watakyonkyon</p>
 
-        <section class="recommendations">
-            <h2>おすすめ特集</h2>
-            <div class="card-container">
-                <article class="card">
-                    <img src="https://via.placeholder.com/300x180" alt="モデルコースの画像">
-                    <div class="card-content">
-                        <h3>しまなみ海道満喫1日コース</h3>
-                        <p>絶景の橋を渡り、島のグルメを楽しむ王道サイクリングコースです。</p>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="https://via.placeholder.com/300x180" alt="今治グルメの画像">
-                    <div class="card-content">
-                        <h3>絶対食べたい！今治グルメ</h3>
-                        <p>ソウルフードの焼豚玉子飯から新鮮な海鮮まで、今治の味を堪能！</p>
-                    </div>
-                </article>
-                 <article class="card">
-                    <img src="https://via.placeholder.com/300x180" alt="タオル美術館の画像">
-                    <div class="card-content">
-                        <h3>タオルとアートの融合</h3>
-                        <p>タオル美術館は、質の高い今治タオルとアートが楽しめる人気スポットです。</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-
+  </div>
 </body>
 </html>
