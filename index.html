@@ -3,57 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>今治市観光アプリ - チーム練習</title>
+  <title>今治観光アプリ</title>
   <style>
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #f5f5f5;
       margin: 0;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      background: #fdfdfd;
+      color: #333;
+    }
+
+    /* ヘッダー */
+    header {
+      position: relative;
+      background: #2c7aa1;
+      color: white;
       padding: 1rem;
       text-align: center;
     }
-
-    header {
-      background: #0077c2;
-      color: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-    }
-
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+    }
+    .menu-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
     }
 
-    .members {
-      background: white;
-      border-radius: 8px;
+    /* 観光地の写真（全面） */
+    .hero {
+      width: 100%;
+      height: 250px;
+      background: url("https://placehold.jp/600x300.png") no-repeat center center/cover;
+    }
+
+    /* セクション共通 */
+    .section {
       padding: 1rem;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    .members h2 {
-      margin-top: 0;
-      color: #0077c2;
-    }
-
-    .members p {
+    .section h2 {
       font-size: 1.1rem;
-      margin: 0.4rem 0;
+      color: #2c7aa1;
+      margin-bottom: 0.5rem;
+    }
+
+    /* アプリ紹介文 */
+    .intro {
+      margin-bottom: 1rem;
+      background: #f8f8f8;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    /* ログインボタン */
+    .login-btn {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      background: #2c7aa1;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    /* 制作者名 */
+    .creators {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .creators ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .creators li {
+      padding: 0.3rem 0;
+    }
+
+    /* 上に戻るボタン */
+    .back-to-top {
+      display: block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background: #2c7aa1;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      text-decoration: none;
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      background: #2c7aa1;
+      color: white;
+      padding: 0.5rem;
+      font-size: 0.8rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>今治市観光アプリ - チーム練習ページ</h1>
-    <p>みんなで名前を追加してみよう！</p>
+    <h1>今治観光アプリ</h1>
+    <div class="menu-btn">☰</div>
   </header>
 
-  <div class="members">
-    <h2>担当メンバー</h2>
+  <!-- 観光地の写真 -->
+  <div class="hero"></div>
 
-<<
+  <div class="section">
+    <!-- アプリの紹介文 -->
+    <div class="intro">
+      <h2>アプリ紹介</h2>
+      <p>瀬戸内海としまなみ海道の街・今治の魅力を紹介するアプリです。観光地・グルメ・イベント情報をチェックしましょう！</p>
+    </div>
 
+    <!-- ログインボタン -->
+    <a href="#" class="login-btn">ログイン</a>
+
+    <!-- 制作者名（5名分） -->
+    <div class="creators">
+      <h2>制作者</h2>
+      <ul>
+        <li>制作者A</li>
+        <li>制作者B</li>
+        <li>制作者C</li>
+        <li>制作者D</li>
+        <li>制作者E</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 上に戻るボタン -->
+  <a href="#" class="back-to-top">↑</a>
+
+  <footer>
+    © 2025 今治観光アプリ
+  </footer>
+</body>
+</html>
