@@ -40,9 +40,3 @@ imabari-fantastic5 is kanko no app wo tukuruyo
 - PRが承認されたら、わたきょさんが「Merge pull request」を実行します。  
 - 競合が起きた場合は、必ずチームで相談してから解決します。  
 
-
-## ✅ 作業手順（基本の流れ）
-1. **mainを最新にする**
-   ```bash
-   git switch main
-   git pull origin main
